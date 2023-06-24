@@ -4,7 +4,7 @@ const connection = {};
 
 
 
-async function connect() {
+async function dbConnect() {
     if (connection.isConnected) {
         return;
     }
@@ -15,7 +15,7 @@ async function connect() {
         }
         await mongoose.disconnect();
     }
-    const db = await mongoose.connect(process.env.MONGO_URL);
+    const db = await mongoose.connect(process.env.MONGODB_URL);
     connection.isConnected = db.connections[0].readyState;
 }
 
@@ -27,5 +27,4 @@ async function disconnect() {
         }
     }
 }
-const db = { connect, disconnect };
-export default db;
+export default dbConnect;
