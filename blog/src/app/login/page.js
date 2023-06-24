@@ -1,19 +1,13 @@
 'use client'
-
+import React, {useState} from 'react'
 
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
-
-import 'react-toastify/dist/ReactToastify.css'
-
-
 
 const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const router = useRouter()
-
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -39,19 +33,16 @@ const Login = () => {
             console.log(error)
         }
     }
-
-
   return (
     <section className="bg-gray-100 max-w-screen-sm m-auto p-8 flex flex-col align-center justify-center rounded-md">
-    <h1 className="mb-4 w-full text-4xl font-light text-center text-gray-800 uppercase sm:text-5xl">
+     <h1 className="mb-4 w-full text-4xl font-light text-center text-gray-800 uppercase sm:text-5xl">
           Login
     </h1>
-    
-<div className="flex flex-col w-full px-4 py-8 bg-white rounded-md shadow sm:px-6 md:px-8 lg:px-10">
-<div className="self-center text-xl font-light text-gray-600 sm:text-2xl">
-   Welcome Back!
-</div>
-<div className="mt-8">
+    <div className="flex flex-col w-full px-4 py-8 bg-white rounded-md shadow sm:px-6 md:px-8 lg:px-10">
+    <div className="self-center text-xl font-light text-gray-600 sm:text-2xl">
+    Welcome Back!
+    </div>
+    <div className="mt-8">
 <form onSubmit={handleSubmit}>
         <div className="mb-2">
             <div className="flex">
@@ -77,9 +68,9 @@ const Login = () => {
                 </span>
             </a>
         </div>
+        
     </div>
-
-</section>
+    </section>
   )
 }
 
