@@ -4,7 +4,7 @@ const connection = {};
 
 
 
-async function dbConnect() {
+async function connect() {
     if (connection.isConnected) {
         return;
     }
@@ -27,4 +27,5 @@ async function disconnect() {
         }
     }
 }
-export default dbConnect;
+const db = { connect, disconnect };
+export default db;
