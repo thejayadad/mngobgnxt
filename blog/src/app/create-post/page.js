@@ -6,8 +6,6 @@ import React, { useState } from 'react'
 import { useSession } from 'next-auth/react'
 
 
-
-
 const Createpost = () => {
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
