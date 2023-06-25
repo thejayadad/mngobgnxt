@@ -1,10 +1,10 @@
-import dbConnect from '@/lib/db';
+import db from '@/lib/db';
 
 import Post from '@/models/Post';
 import { verifyJwtToken, verifyToken } from '@/lib/jwt';
 
 export async function GET(req) {
-    await dbConnect()
+    await db.connect()
 
     try {
         const posts = await Post.find({}).limit(16).populate("authorId")
@@ -15,7 +15,7 @@ export async function GET(req) {
 }
 
 export async function POST(req) {
-    await dbConnect()
+    await db.connect()
 
     const accessToken = req.headers.get("authorization")
     const token = accessToken.split(' ')[1]
