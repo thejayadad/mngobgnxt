@@ -1,4 +1,4 @@
-import dbConnect from '@/lib/db';
+import db from '@/lib/db';
 
 import { verifyJwtToken } from "@/lib/jwt";
 
@@ -6,7 +6,7 @@ import Post from '@/models/Post';
 import User from '@/models/User';
 
 export async function GET(req, ctx) {
-    await dbConnect()
+    await db.connect()
 
     const id = ctx.params.id
 
@@ -20,7 +20,7 @@ export async function GET(req, ctx) {
 }
 
 export async function PUT(req, ctx) {
-    await dbConnect()
+    await db.connect()
 
     const id = ctx.params.id
     const accessToken = req.headers.get('authorization')
@@ -49,7 +49,7 @@ export async function PUT(req, ctx) {
 }
 
 export async function DELETE(req, ctx) {
-    await dbConnect()
+    await db.connect()
 
     const id = ctx.params.id
 

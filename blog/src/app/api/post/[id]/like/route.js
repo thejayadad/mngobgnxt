@@ -1,4 +1,4 @@
-import dbConnect from '@/lib/db';
+import db from '@/lib/db';
 
 import { verifyJwtToken } from "@/lib/jwt";
 
@@ -6,7 +6,7 @@ import Post from '@/models/Post';
 
 
 export async function PUT(req, ctx) {
-    await dbConnect()
+    await db.connect()
 
     const id = ctx.params.id
 
