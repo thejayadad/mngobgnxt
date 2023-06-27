@@ -70,12 +70,12 @@ const Createpost = () => {
             <input type='text' onChange={(e) => setDesc(e.target.value)} className='w-full focus:outline-none pt-8 pb-8 pl-2 mt-4' placeholder='Share Your Thoughts...'/>
         </div>
         <div>
-            <select onChange={(e) => setCategory(e.target.value)}  className='w-full focus:outline-none p-2 mt-4'>
-                <option value='sports'>Sports</option>
-                <option value='money'>Money</option>
-                <option value='news'>News</option>
-                <option value='tech'>Tech</option>
-                <option value='programming'>Programming</option>
+            <select value={category} onChange={(e) => setCategory(e.target.value)}  className='w-full focus:outline-none p-2 mt-4'>
+                <option value='Sports'>Sports</option>
+                <option value='Money'>Money</option>
+                <option value='News'>News</option>
+                <option value='Tech'>Tech</option>
+                <option value='Programming'>Programming</option>
             </select>
         </div>
             <button
