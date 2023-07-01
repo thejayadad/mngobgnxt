@@ -51,7 +51,7 @@ const Post = ({ post: { title, desc, likes, category, authorId, _id } }) => {
   
           </p>
           <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-            <Link href={`/api/post/${_id}`} className="text-indigo-500 inline-flex items-center">See More
+            <Link href={`/post/${_id}`} className="text-indigo-500 inline-flex items-center">See More
              </Link>
             <span className="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
             {postLikes} {" "} {isLiked
