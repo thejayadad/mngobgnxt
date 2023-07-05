@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import { AiOutlineFileImage } from 'react-icons/ai'
 
 const Edit = (ctx) => {
     const [title, setTitle] = useState("")
