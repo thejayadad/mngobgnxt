@@ -11,7 +11,6 @@ const Edit = (ctx) => {
     const { data: session, status } = useSession()
     const router = useRouter()
 
-
     useEffect(() => {
         async function fetchPost() {
             const res = await fetch(`http://localhost:3000/api/post/${ctx.params.id}`)
@@ -33,9 +32,7 @@ const Edit = (ctx) => {
         return <p>
             Access Denied
         </p>
-    }
-
-    const handleSubmit = async (e) => {
+    }const handleSubmit = async (e) => {
         e.preventDefault()
 
         if(title === '' || category === '' || desc === ''){
@@ -68,8 +65,6 @@ const Edit = (ctx) => {
             console.log(error)
         }
     }
-
-
     return(
         <section className="bg-gray-100 max-w-screen-sm m-auto p-8">
         
@@ -111,6 +106,7 @@ const Edit = (ctx) => {
     </form>
 </section>
     )
+
 }
 
 export default Edit
