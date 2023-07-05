@@ -73,10 +73,10 @@ const Edit = (ctx) => {
     return(
         <section className="bg-gray-100 max-w-screen-sm m-auto p-8">
         
-    <div class="text-center mb-20">
-  <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Update Post</h1>
-  <div class="flex mt-2 justify-center">
-    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+    <div className="text-center mb-20">
+  <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Update Post</h1>
+  <div className="flex mt-2 justify-center">
+    <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
   </div>
 </div>
 
