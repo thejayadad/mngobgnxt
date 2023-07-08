@@ -96,7 +96,7 @@ const PostDetails = (ctx) => {
 
         try {
             const body = {
-                blogId: ctx.params.id,
+                postId: ctx.params.id,
                 authorId: session?.user?._id,
                 text: commentText
             }
