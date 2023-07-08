@@ -1,9 +1,8 @@
 
 import db from "@/lib/db";
-
 import { verifyJwtToken } from "@/lib/jwt";
-
 import Comment from '@/models/Comment';
+
 
 export async function GET(req, ctx){
     await db.connect()

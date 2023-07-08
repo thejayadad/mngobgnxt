@@ -170,7 +170,9 @@ const PostDetails = (ctx) => {
             <input 
             onChange={(e) => setCommentText(e.target.value)}
             value={commentText}
-            className='w-full focus:outline-none p-8 mt-4' placeholder='Leave your comment here...'/>
+            type='text'
+            className='w-full focus:outline-none p-8 mt-4' 
+            placeholder='Leave your comment here...'/>
         </div>
         <div>
             <button
