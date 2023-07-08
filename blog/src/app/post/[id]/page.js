@@ -5,6 +5,7 @@ import { BsFillPencilFill } from 'react-icons/bs'
 import { AiFillDelete, AiFillLike, AiOutlineLike } from 'react-icons/ai'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import Comment from '@/components/Comment'
 
 
 const PostDetails = (ctx) => {
@@ -112,6 +113,8 @@ const PostDetails = (ctx) => {
 
     </div>
     </div>
+    <h2 className='text-center'>Comment Section</h2>
+    <Comment />
     </div>
     </section>
     </>
