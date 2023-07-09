@@ -8,13 +8,14 @@ import { useRouter } from 'next/navigation'
 import Comment from '@/components/Comment'
 
 
+
 const PostDetails = (ctx) => {
     const [postDetails, setPostDetails] = useState("")
     const [isLiked, setIsLiked] = useState(false)
     const [postLikes, setPostLikes] = useState(0)
     const [commentText, setCommentText] = useState("")
     const [comments, setComments] = useState([])
-
+ 
     const { data: session } = useSession()
     const router = useRouter()
 
@@ -26,8 +27,7 @@ const PostDetails = (ctx) => {
           setComments(comments)
         }
         fetchComments()
-      }, [])
-  
+      }, [])    
 
 
     useEffect(() => {
@@ -120,8 +120,7 @@ const PostDetails = (ctx) => {
         } catch (error) {
             console.log(error)
         }
-    }
-
+    } 
   
    return (
     <>
@@ -189,7 +188,7 @@ const PostDetails = (ctx) => {
         ))
         : <h4 >Be the first one to leave a comment!</h4>
     }
-    </div>
+    </div>  
     </div>
     </section>
     </>
